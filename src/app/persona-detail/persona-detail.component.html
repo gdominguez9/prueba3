@@ -1,0 +1,13 @@
+<p>persona-detail works!</p>
+
+<!-- Luego lo que faltaria por añadir es lo de editar -->
+<div *ngIf="persona"> 
+    <h2>Detalles de la persona seleccionada de la lista {{persona.name | uppercase}}</h2>
+    <div><span>Su es id: </span>{{persona.id}}</div>
+    <div><span>Su es name: </span>{{persona.name}}</div>
+
+    <button (click)="goBack()">go back</button>
+
+</div>
+
+ 

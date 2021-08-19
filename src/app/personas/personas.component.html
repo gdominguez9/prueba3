@@ -1,0 +1,21 @@
+<p>personas works!</p>
+<h2>Lista de personas </h2>
+
+<ul class="personas">
+    <li *ngFor="let persona of personas">
+      <a routerLink="/detail/{{persona.id}}">
+        <span class="badge">{{persona.id}}</span> {{persona.name}}
+      </a>
+    </li>
+</ul>
+
+<!--  <ul class="personas">
+    <li> {{persona.id}} {{persona.name}} </li>
+    <li *ngFor="let persona of personas"
+      [class.selected]="persona === selectedPersona"
+      (click)="onSelect(persona)">
+      {{persona.id}} {{persona.name}}
+    </li>
+  </ul>
+
+<app-persona-detail [persona]="selectedPersona"></app-persona-detail> -->
