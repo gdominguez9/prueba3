@@ -1,0 +1,18 @@
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px; 
+    background-color: #e8e8e8;
+    color: #3d3d3d;
+    border-radius: 4px;
+}
