@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": [{
+    "name": "typicode"
+  }],
+
+    "Persona": [
+        {
+            "id":1,
+            "name":"Diego",
+            "surname":"García",
+            "personal_email":"diego@gmail.com",
+            "created_date":"1997-3-21",
+            "imagen_url":"https://www.losanimales.org/wp-content/uploads/2018/03/Perros.jpg"
+        },
+        {
+            "id":2,            
+            "name":"Chuchi",
+            "surname":"Puente",
+            "personal_email":"otro@gmail.com",
+            "created_date":"1966-12-23",
+            "imagen_url":"https://www.elsoldemexico.com.mx/doble-via/zcq7d4-perro.jpg/ALTERNATES/LANDSCAPE_1140/perro.jpg"
+        }
+    ]
+
+}
