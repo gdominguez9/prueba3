@@ -10,12 +10,16 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { PersonaBorrarComponent } from './persona-borrar/persona-borrar.component';
+//import { PersonaEditarComponent } from './persona-editar/persona-editar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonasComponent,
-    PersonaDetailComponent
+    PersonaDetailComponent,
+    PersonaBorrarComponent,
+    //PersonaEditarComponent
   ],
   imports: [
     BrowserModule,
