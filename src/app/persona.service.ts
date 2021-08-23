@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'; //Para inyeccion de dependencias
 import { Observable, of } from 'rxjs';
-import { Persona } from './persona';
-import { PERSONAS } from './lista-persona';
+import { Persona } from './Persona';
+import { HttpClient } from '@angular/common/http'; 
 
 
 @Injectable({ 
@@ -9,15 +9,29 @@ import { PERSONAS } from './lista-persona';
 })
 export class PersonaService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
 
-  getPersonas(): Observable<Persona[]> {
-    const personas = of(PERSONAS);
-    return personas;
+  url: string = "http://localhost:3000/Persona"
+
+  getPersonas():Observable<Persona[]>{ 
+    return this.http.get<Persona[]>(this.url);
   }
 
   getPersona(id: number): Observable<Persona> {
-    const persona = PERSONAS.find(p => p.id === id)!;
-    return of(persona);
+    const urlid = `${this.url}/${id}`;
+    return this.http.get<Persona>(urlid);
   }
+
+  //updatePersona(persona: Persona): Observable<Persona> {
+  //  return this.http.put(this.url, persona, this.httpOptions);
+  //}
+
+  borrarPersona(id: number): Observable<Persona> { 
+    const urlid = `${this.url}/${id}`;
+    return this.http.delete<Persona>(urlid);
+  }
+
+
 }

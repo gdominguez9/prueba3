@@ -1,13 +1,53 @@
-<p>personas works!</p>
 <h2>Lista de personas </h2>
 
 <ul class="personas">
-    <li *ngFor="let persona of personas">
-      <a routerLink="/detail/{{persona.id}}">
-        <span class="badge">{{persona.id}}</span> {{persona.name}}
-      </a>
-    </li>
+  <li *ngFor="let persona of personas">
+    <app-persona-detail [persona]="persona"></app-persona-detail>
+  
+    <!-- <a routerLink="/editar/{{persona.id}}">
+      <span class="badge">editar</span>
+    </a> -->
+
+    <button class="borrar" title="borrar persona" (click)="borrar(persona)">Borrar</button> 
+
+  </li>
 </ul>
+
+<router-outlet></router-outlet>
+
+
+<!-- <ul class="personas">
+    <li *ngFor="let persona of personas">
+      <div class="contenedor">
+        <mat-card class="tarjeta" *ngIf="persona!=null">
+          <mat-card-header>
+            <div mat-card-avatar><img mat-card-image src={{persona.imagen_url}} class="circular"></div>
+            <mat-card-title>{{persona.name}}, {{persona.surname}}</mat-card-title>
+            <mat-card-subtitle>Id:{{persona.id}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src={{persona.imagen_url}}>
+          <mat-card-content>
+            <p>Email:{{persona.personal_email}}</p>
+            <p>Fecha:{{persona.created_date}}</p>
+          </mat-card-content> -->
+          <!-- <mat-card-actions>
+            <button mat-flat-button (click)="updatePersona()" color="primary">Editar persona</button>
+          </mat-card-actions>  -->
+        <!-- </mat-card>
+      </div> 
+    </li>
+</ul> -->
+
+
+
+<!-- ANTES -->
+<!-- <ul class="personas">
+  <li *ngFor="let persona of personas">
+    <a routerLink="/detail/{{persona.id}}">
+      <span class="badge">{{persona.id}}</span> {{persona.name}}
+    </a>
+  </li>
+</ul> -->
 
 <!--  <ul class="personas">
     <li> {{persona.id}} {{persona.name}} </li>

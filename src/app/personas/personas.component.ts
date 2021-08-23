@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Persona } from '../persona';
+import { Persona } from '../Persona';
 import { PersonaService } from '../persona.service';
 
 @Component({
@@ -24,13 +24,25 @@ export class PersonasComponent implements OnInit {
   }
 
   getPersonas(): void {
-     this.personaService.getPersonas()
-      .subscribe(personas => this.personas = personas); //Porque esperamos un Observable<>
+     this.personaService.getPersonas().subscribe
+     (
+      (response)=>
+      {
+        this.personas = response;
+        console.log(this.personas)
+      },
+
+      (error)=>
+      {
+        console.log("Error in getPersonas:"+error);
+      }
+    ) 
   }
 
-  //selectedPersona?: Persona;
-  //onSelect(persona: Persona): void {
-  //  this.selectedPersona = persona;
-  //}
+  borrar(persona: Persona): void {
+    console.log("entra"+persona.id)
+    this.personas = this.personas.filter(p => p !== persona);
+    this.personaService.borrarPersona(persona.id).subscribe();
+  }
 
 }

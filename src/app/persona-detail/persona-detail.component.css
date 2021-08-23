@@ -1,0 +1,21 @@
+
+.tarjeta {
+    min-width: 100px;
+    max-width: 200px;
+    background-color: burlywood;
+    border: 1px;
+    margin: 10px;
+    border-color: black;
+  }
+  
+  .circular {
+    border-radius: 50%;
+  }
+  
+  .contenedor {
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+  }

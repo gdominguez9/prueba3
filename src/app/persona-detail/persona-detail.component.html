@@ -1,13 +1,28 @@
 <p>persona-detail works!</p>
 
 <!-- Luego lo que faltaria por añadir es lo de editar -->
-<div *ngIf="persona"> 
-    <h2>Detalles de la persona seleccionada de la lista {{persona.name | uppercase}}</h2>
+<!-- <div *ngIf="persona"> 
+    <h2>Detalles de la persona {{persona.name | uppercase}}</h2>
     <div><span>Su es id: </span>{{persona.id}}</div>
-    <div><span>Su es name: </span>{{persona.name}}</div>
+    <div><span>Su es name: </span>{{persona.name}}</div> -->
+    <!-- <button (click)="goBack()">go back</button> -->
+<!-- </div> -->
 
-    <button (click)="goBack()">go back</button>
-
+<div class="contenedor" *ngIf="persona"> 
+    <mat-card class="tarjeta" *ngIf="persona!=null">
+        <mat-card-header>
+          <div mat-card-avatar><img mat-card-image src={{persona.imagen_url}} class="circular"></div>
+          <mat-card-title>{{persona.name}}, {{persona.surname}}</mat-card-title>
+          <mat-card-subtitle>Id:{{persona.id}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src={{persona.imagen_url}}>
+        <mat-card-content>
+          <p>Email:{{persona.personal_email}}</p>
+          <p>Fecha:{{persona.created_date}}</p>
+        </mat-card-content> 
+        <!-- <mat-card-actions>
+          <button mat-flat-button (click)="updatePersona()" color="primary">Editar persona</button>
+        </mat-card-actions>  -->
+      </mat-card>
 </div>
 
- 
