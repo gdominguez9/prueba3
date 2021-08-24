@@ -21,19 +21,17 @@
   "Persona": [
     {
       "id": 1,
-      "name": "Diego",
-      "surname": "Gracia",
-      "personal_email": "otro@gmail.com",
-      "created_date": "1966-12-23",
-      "imagen_url": "https://www.elsoldemexico.com.mx/doble-via/zcq7d4-perro.jpg/ALTERNATES/LANDSCAPE_1140/perro.jpg"
+      "name": "ahora",
+      "surname": "3",
+      "personal_email": "sei@gmail.com",
+      "created_date": "1966-12-23"
     },
     {
       "id": 2,
       "name": "Chuchi",
       "surname": "Puente",
       "personal_email": "otro@gmail.com",
-      "created_date": "1966-12-23",
-      "imagen_url": "https://www.elsoldemexico.com.mx/doble-via/zcq7d4-perro.jpg/ALTERNATES/LANDSCAPE_1140/perro.jpg"
+      "created_date": "1966-12-23"
     }
   ]
 }

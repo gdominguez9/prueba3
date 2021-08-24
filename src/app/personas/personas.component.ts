@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Persona } from '../Persona';
 import { PersonaService } from '../persona.service';
 
@@ -8,7 +8,7 @@ import { PersonaService } from '../persona.service';
   styleUrls: ['./personas.component.css']
 })
 export class PersonasComponent implements OnInit {
-
+  
   //persona: Persona = {
   //  id: 1,
   //  name: 'Persona 1'
@@ -39,10 +39,13 @@ export class PersonasComponent implements OnInit {
     ) 
   }
 
-  borrar(persona: Persona): void {
-    console.log("entra"+persona.id)
-    this.personas = this.personas.filter(p => p !== persona);
-    this.personaService.borrarPersona(persona.id).subscribe();
+  public  borrar(id: number): void {
+    console.log("entra en padre"+id)
+     this.personaService.borrarPersona(id).subscribe( (ok) => {
+       this.personas = this.personas.filter(p => p.id !==id);}
+      );
+    //this.personas = this.personas.filter(p => p !== persona);
+    //this.personaService.borrarPersona(persona.id).subscribe();
   }
-
+  
 }

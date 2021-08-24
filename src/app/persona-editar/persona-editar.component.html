@@ -1,0 +1,79 @@
+<h1>Editar persona</h1>
+
+<br>
+
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()"> <!-- (ngSubmit)="onSubmit()"-->
+
+    <div>
+        <mat-form-field>
+            <input matInput type="number" class="form-control" formControlName="id" placeholder="id">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <input matInput type="text" class="form-control" formControlName="name" placeholder="name">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <input matInput type="text" class="form-control" formControlName="surname" placeholder="surname">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <input matInput type="text" class="form-control" formControlName="personal_email" placeholder="personal_email">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <input matInput type="text" class="form-control" formControlName="created_date" placeholder="created_date">
+        </mat-form-field> 
+    </div>
+
+  
+</form>
+
+<br>
+
+
+<button mat-raised-button type="submit">Submit</button>  <!--[disabled]="!formulario.valid"-->
+<button mat-raised-button (click)="sacaFormulario()">Saca lo escrito</button>
+<button mat-raised-button class="btn" (click)="iniciaFormulario()">Restaurar</button> 
+
+
+
+<!-- 
+<div class="contenedor" *ngIf="persona"> 
+    
+    <form (submit)="submit()">
+        <div class="form-group">
+            <label for="id">id</label>
+            <input type="number" class="form-control" formControlName="id">
+        </div>
+        <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div class="form-group">
+            <label for="surname">surname</label>
+            <input type="text" class="form-control" formControlName="surname">
+        </div>
+        <div class="form-group">
+            <label for="personal_email">personal_email</label>
+            <input type="text" class="form-control" formControlName="personal_email">
+        </div>
+        <div class="form-group">
+            <label for="created_date">created_date</label>
+            <input type="text" class="form-control" formControlName="created_date">
+        </div>
+
+    </form>    
+
+</div> 
+
+<button class="btn update" type="submit" (click)="submit()">Enviar</button>   
+--> 

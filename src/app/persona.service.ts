@@ -24,13 +24,19 @@ export class PersonaService {
     return this.http.get<Persona>(urlid);
   }
 
-  //updatePersona(persona: Persona): Observable<Persona> {
-  //  return this.http.put(this.url, persona, this.httpOptions);
-  //}
-
   borrarPersona(id: number): Observable<Persona> { 
     const urlid = `${this.url}/${id}`;
     return this.http.delete<Persona>(urlid);
+  }
+
+  /*editarPersona(id: number, Persona: any): Observable<Persona> {
+    const urlid = `${this.url}/${id}`;
+    return this.http.put<Persona>(urlid,Persona);
+  }*/
+
+  editarPersona(id: number,personaUpdated: Persona): Observable<Persona> {
+    const urlid = `${this.url}/${id}`;
+    return this.http.put<Persona>(urlid,personaUpdated);
   }
 
 

@@ -11,7 +11,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { PersonaBorrarComponent } from './persona-borrar/persona-borrar.component';
-//import { PersonaEditarComponent } from './persona-editar/persona-editar.component';
+import { PersonaEditarComponent } from './persona-editar/persona-editar.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PruebaComponent } from './prueba/prueba.component';
+
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,8 @@ import { PersonaBorrarComponent } from './persona-borrar/persona-borrar.componen
     PersonasComponent,
     PersonaDetailComponent,
     PersonaBorrarComponent,
-    //PersonaEditarComponent
+    PersonaEditarComponent,
+    PruebaComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +33,10 @@ import { PersonaBorrarComponent } from './persona-borrar/persona-borrar.componen
     HttpClientModule,
     MatCardModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
