@@ -1,23 +1,28 @@
 <!-- <p>persona-detail works!</p> -->
 
-<div class="contenedor" *ngIf="persona"> 
+<!--<div class="contenedor" *ngIf="persona"> -->
     <mat-card class="tarjeta" *ngIf="persona!=null">
         <mat-card-header>
-          <div mat-card-avatar><img mat-card-image src="https://www.elsoldemexico.com.mx/doble-via/zcq7d4-perro.jpg/ALTERNATES/LANDSCAPE_1140/perro.jpg" class="circular"></div>
-          <mat-card-title>{{persona.name}}, {{persona.surname}}</mat-card-title>
-          <mat-card-subtitle>Id:{{persona.id}}</mat-card-subtitle>
+          <mat-card-title>{{persona.name}}</mat-card-title>
+          <mat-card-subtitle>{{persona.surname}}</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image src="https://www.elsoldemexico.com.mx/doble-via/zcq7d4-perro.jpg/ALTERNATES/LANDSCAPE_1140/perro.jpg">
+
+        <img mat-card-image src="https://espacodoafiliado.com.br/upload_clientes/73673/userfiles/images/artigos/ganhar%20dinheiro%20com%20blog/como%20ganhar%20dinheiro%20com%20blog.png">
+
         <mat-card-content>
-          <p>Email:{{persona.personal_email}}</p>
-          <p>Fecha:{{persona.created_date}}</p>
+          <h3>{{persona.personal_email}}</h3>
+          <p>
+            <strong>Ciudad de nacimiento:</strong>{{persona.city}}
+            <br>
+            <strong>Fecha de nacimiento:</strong>{{persona.created_date}}
+          </p>
         </mat-card-content> 
+
         <mat-card-actions>
-          <button mat-flat-button (click)="updatePersona(persona.id)" color="primary">Editar persona</button>
+          <button mat-button (click)="updatePersona(persona.id)" color="warn">Editar</button>
+          <button mat-button (click)="borrar(persona.id)" color="warn">Borrar</button> 
         </mat-card-actions> 
-        
-      <button class="borrar" title="borrar persona" (click)="borrar(persona.id)">Borrar</button> 
 
       </mat-card>
-</div>
+<!-- </div> -->
 

@@ -1,6 +1,5 @@
 <h2>Lista de personas </h2>
 
-
 <div class="personas" *ngFor="let persona of personas">
   
     <app-persona-detail [persona]="persona" (borrarEmit)="borrar($event)"></app-persona-detail>

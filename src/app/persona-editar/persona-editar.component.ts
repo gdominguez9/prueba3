@@ -6,6 +6,7 @@ import { PersonaService } from '../persona.service';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
+
 @Component({
   selector: 'app-persona-editar',
   templateUrl: './persona-editar.component.html',
@@ -15,12 +16,10 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 export class PersonaEditarComponent implements OnInit {
   
   persona !: Persona; 
-  //updatedPersona: Persona | undefined;
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    //public data: Persona,
     private personaService: PersonaService,
     private fb: FormBuilder
   ) { }
@@ -28,9 +27,12 @@ export class PersonaEditarComponent implements OnInit {
 
   formulario: FormGroup = this.fb.group({
     id: [''],
+    password: [''],
     name: [''] ,
     surname: [''],
+    company_email: [''],
     personal_email: [''],
+    city: [''],
     created_date: ['']
   })
   
@@ -57,11 +59,9 @@ export class PersonaEditarComponent implements OnInit {
  
   onSubmit() {
     console.log(this.formulario.value)
-  }
-
-  sacaFormulario(){
     this.personaService.editarPersona(Number(this.route.snapshot.paramMap.get('id')),this.formulario.value).subscribe();
     this.location.back();
   }
+
 
 }

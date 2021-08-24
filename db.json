@@ -21,16 +21,22 @@
   "Persona": [
     {
       "id": 1,
-      "name": "ahora",
-      "surname": "3",
-      "personal_email": "sei@gmail.com",
-      "created_date": "1966-12-23"
+      "password": "camino",
+      "name": "diego",
+      "surname": "garcia",
+      "company_email": "este@gmail.com",
+      "personal_email": "oeste@gmail.com",
+      "city": "Zaragoza",
+      "created_date": "21/3/97"
     },
     {
       "id": 2,
       "name": "Chuchi",
+      "password": "contraseña2",
       "surname": "Puente",
       "personal_email": "otro@gmail.com",
+      "company_email": "empresa@gmail.com",
+      "city": "Logroño",
       "created_date": "1966-12-23"
     }
   ]

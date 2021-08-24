@@ -6,42 +6,52 @@
 
     <div>
         <mat-form-field>
-            <input matInput type="number" class="form-control" formControlName="id" placeholder="id">
+            <input matInput type="text" class="form-control" formControlName="name" placeholder="Usuario">
         </mat-form-field>
     </div>
 
     <div>
         <mat-form-field>
-            <input matInput type="text" class="form-control" formControlName="name" placeholder="name">
+            <input matInput type="text" class="form-control" formControlName="password" placeholder="Contraseña">
         </mat-form-field>
     </div>
 
     <div>
         <mat-form-field>
-            <input matInput type="text" class="form-control" formControlName="surname" placeholder="surname">
+            <input matInput type="text" class="form-control" formControlName="surname" placeholder="Apellidos">
         </mat-form-field>
     </div>
 
     <div>
         <mat-form-field>
-            <input matInput type="text" class="form-control" formControlName="personal_email" placeholder="personal_email">
+            <input matInput type="text" class="form-control" formControlName="company_email" placeholder="Email de empresa">
         </mat-form-field>
     </div>
 
     <div>
         <mat-form-field>
-            <input matInput type="text" class="form-control" formControlName="created_date" placeholder="created_date">
+            <input matInput type="text" class="form-control" formControlName="personal_email" placeholder="Email personal">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <input matInput type="text" class="form-control" formControlName="city" placeholder="Población">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <input matInput type="text" class="form-control" formControlName="created_date" placeholder="Fecha de nacimiento">
         </mat-form-field> 
     </div>
 
-  
 </form>
 
 <br>
 
 
-<button mat-raised-button type="submit">Submit</button>  <!--[disabled]="!formulario.valid"-->
-<button mat-raised-button (click)="sacaFormulario()">Saca lo escrito</button>
+<button mat-raised-button type="submit" (click)="onSubmit()">Actualizar</button>  <!--[disabled]="!formulario.valid"-->
 <button mat-raised-button class="btn" (click)="iniciaFormulario()">Restaurar</button> 
 
 
