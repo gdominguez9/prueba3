@@ -20,7 +20,8 @@ import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatIconModule} from '@angular/material/icon';
 import { PersonaAddComponent } from './persona-add/persona-add.component';
-//import { MatToolbarModule } from '@angular/material';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -43,8 +44,9 @@ import { PersonaAddComponent } from './persona-add/persona-add.component';
     MatFormFieldModule,
     FlexLayoutModule,
     MatInputModule,
-    MatIconModule
-    //MatToolbarModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

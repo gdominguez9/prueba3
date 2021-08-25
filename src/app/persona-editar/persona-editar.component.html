@@ -7,36 +7,44 @@
     <div>
         <mat-form-field>
             <input matInput type="text" class="form-control" formControlName="name" placeholder="Usuario">
+            <mat-error *ngIf="formulario.controls['name'].errors?.required">This field is required</mat-error>
+            <mat-error *ngIf="formulario.controls['name'].errors?.minlength">Minimum 6 characters</mat-error>
+            <mat-error *ngIf="formulario.controls['name'].errors?.maxlength">Maximum 10 characters</mat-error>
         </mat-form-field>
     </div>
 
     <div>
         <mat-form-field>
             <input matInput type="password" class="form-control" formControlName="password" placeholder="Contraseña">
+            <mat-error>This field is required</mat-error>
         </mat-form-field>
     </div>
 
     <div>
         <mat-form-field>
             <input matInput type="text" class="form-control" formControlName="surname" placeholder="Apellidos">
+            <mat-error>This field is required</mat-error>
         </mat-form-field>
     </div>
 
     <div>
         <mat-form-field>
             <input matInput type="text" class="form-control" formControlName="company_email" placeholder="Email de empresa">
+            <mat-error *ngIf="formulario.controls['company_email'].errors?.email">An email is required</mat-error>
         </mat-form-field>
     </div>
 
     <div>
         <mat-form-field>
             <input matInput type="text" class="form-control" formControlName="personal_email" placeholder="Email personal">
+            <mat-error *ngIf="formulario.controls['personal_email'].errors?.email">An email is required</mat-error>
         </mat-form-field>
     </div>
 
     <div>
         <mat-form-field>
             <input matInput type="text" class="form-control" formControlName="city" placeholder="Población">
+            <mat-error *ngIf="formulario.controls['name'].errors?.email">An email is required</mat-error>
         </mat-form-field>
     </div>
 

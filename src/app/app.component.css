@@ -3,9 +3,12 @@ h1{
     justify-content: center;
 }
 
-h2{
-    display: flex;
-    justify-content: center;
+div.barra{
+    margin: 0px 4px;
+}
+
+.fill-space{
+    flex: 1 1 auto;
 }
 
 nav{
