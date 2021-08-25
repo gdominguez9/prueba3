@@ -8,15 +8,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
 import { PersonaBorrarComponent } from './persona-borrar/persona-borrar.component';
 import { PersonaEditarComponent } from './persona-editar/persona-editar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PruebaComponent } from './prueba/prueba.component';
 
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FlexLayoutModule } from '@angular/flex-layout';
+//import { MatToolbarModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import {MatInputModule} from '@angular/material/input';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
+    FlexLayoutModule,
     MatInputModule
+    //MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
