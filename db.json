@@ -27,15 +27,15 @@
       "company_email": "este@gmail.com",
       "personal_email": "oeste@gmail.com",
       "city": "Zaragoza",
-      "created_date": "21/3/97"
+      "created_date": "1997-03-21"
     },
     {
       "id": 2,
-      "name": "Chuchi",
       "password": "contraseña2",
+      "name": "Chuchi",
       "surname": "Puente",
-      "personal_email": "otro@gmail.com",
       "company_email": "empresa@gmail.com",
+      "personal_email": "otro@gmail.com",
       "city": "Logroño",
       "created_date": "1966-12-23"
     }

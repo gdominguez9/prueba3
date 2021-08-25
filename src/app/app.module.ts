@@ -18,6 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatIconModule} from '@angular/material/icon';
 //import { MatToolbarModule } from '@angular/material';
 
 @NgModule({
@@ -39,7 +40,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ReactiveFormsModule,
     MatFormFieldModule,
     FlexLayoutModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule
     //MatToolbarModule,
   ],
   providers: [],
