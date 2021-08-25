@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core'; //Para inyeccion de dependencias
 import { Observable, of } from 'rxjs';
 import { Persona } from './Persona';
 import { HttpClient } from '@angular/common/http'; 
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({ 
@@ -13,7 +14,7 @@ export class PersonaService {
     private http : HttpClient
   ) { }
 
-  url: string = "http://localhost:3000/Persona"
+  url: string = `${environment.url}Persona`
 
   getPersonas():Observable<Persona[]>{ 
     return this.http.get<Persona[]>(this.url);
@@ -29,10 +30,10 @@ export class PersonaService {
     return this.http.delete<Persona>(urlid);
   }
 
-  /*editarPersona(id: number, Persona: any): Observable<Persona> {
-    const urlid = `${this.url}/${id}`;
-    return this.http.put<Persona>(urlid,Persona);
-  }*/
+  anadirPersona(personaAdd: Persona): Observable<Persona> {
+    const urlid = `${this.url}`;
+    return this.http.post<Persona>(urlid,personaAdd);
+  }
 
   editarPersona(id: number,personaUpdated: Persona): Observable<Persona> {
     const urlid = `${this.url}/${id}`;

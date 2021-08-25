@@ -4,7 +4,7 @@ import { Location } from '@angular/common';
 import { Persona } from '../Persona';
 import { PersonaService } from '../persona.service';
 import { ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -27,11 +27,11 @@ export class PersonaEditarComponent implements OnInit {
 
   formulario: FormGroup = this.fb.group({
     id: [''],
-    password: [''],
-    name: [''] ,
-    surname: [''],
-    company_email: [''],
-    personal_email: [''],
+    password: ['',Validators.required],
+    name: ['',[Validators.minLength(6),Validators.maxLength(10)]] ,
+    surname: ['',Validators.required],
+    company_email: ['',[ Validators.required, Validators.email,]],
+    personal_email: ['',[ Validators.required, Validators.email,]],
     city: [''],
     created_date: ['']
   })
@@ -55,6 +55,10 @@ export class PersonaEditarComponent implements OnInit {
         (error)=>
         { console.log("Error in editar:"+error);}
       ) 
+  }
+
+  cancelar() {
+    this.location.back();
   }
  
   onSubmit() {

@@ -1,4 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Persona } from '../Persona';
 import { PersonaService } from '../persona.service';
 
@@ -17,7 +18,10 @@ export class PersonasComponent implements OnInit {
   personas: Persona[] = [];
 
 
-  constructor(private personaService: PersonaService) { }
+  constructor(
+    private personaService: PersonaService,
+    private route: Router
+    ) { }
 
   ngOnInit(){
     this.getPersonas();
@@ -37,6 +41,13 @@ export class PersonasComponent implements OnInit {
         console.log("Error in getPersonas:"+error);
       }
     ) 
+  }
+
+  public addPersona(): void{  //(id:number)
+
+    console.log("En add");
+    const id = this.personas[this.personas.length-1].id;
+    this.route.navigate(["/add/"+id])
   }
 
   public  borrar(id: number): void {

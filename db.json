@@ -22,7 +22,7 @@
     {
       "id": 1,
       "password": "camino",
-      "name": "diego",
+      "name": "diego2",
       "surname": "garcia",
       "company_email": "este@gmail.com",
       "personal_email": "oeste@gmail.com",
@@ -37,6 +37,16 @@
       "company_email": "empresa@gmail.com",
       "personal_email": "otro@gmail.com",
       "city": "Logroño",
+      "created_date": "1966-12-23"
+    },
+    {
+      "id": 3,
+      "password": "eecsvsev",
+      "name": "Personaje",
+      "surname": "ijkl",
+      "company_email": "opk@deep.es",
+      "personal_email": "ups@deep.es",
+      "city": "vesvsev",
       "created_date": "1966-12-23"
     }
   ]

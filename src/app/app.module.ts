@@ -19,6 +19,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatIconModule} from '@angular/material/icon';
+import { PersonaAddComponent } from './persona-add/persona-add.component';
 //import { MatToolbarModule } from '@angular/material';
 
 @NgModule({
@@ -29,6 +30,7 @@ import {MatIconModule} from '@angular/material/icon';
     PersonaBorrarComponent,
     PersonaEditarComponent,
     PruebaComponent,
+    PersonaAddComponent,
   ],
   imports: [
     BrowserModule,
